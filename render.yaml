@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: virtual-stock-festival
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_KEY
+        value: festival2025
+    autoDeploy: false
